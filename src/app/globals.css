@@ -12,3 +12,33 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
+/* PDF/印刷専用スタイル */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+    color: #333333 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* 画面用ボタン・ナビなどは印刷時に非表示 */
+  .no-print {
+    display: none !important;
+  }
+  /* セクションがページ途中で切れないように */
+  .print-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* 結果コンテナは余白とサイズを調整 */
+  .print-area {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

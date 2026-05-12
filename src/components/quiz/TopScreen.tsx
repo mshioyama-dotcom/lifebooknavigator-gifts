@@ -28,7 +28,8 @@ export default function TopScreen({
           {description.map((line, i) => (
             <li
               key={i}
-              className="text-sm sm:text-base text-[#333333] leading-relaxed"
+              className="text-sm sm:text-base text-[#333333] leading-relaxed break-keep"
+              style={{ textWrap: "pretty" }}
             >
               {line}
             </li>
