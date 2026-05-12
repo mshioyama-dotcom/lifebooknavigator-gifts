@@ -16,7 +16,10 @@ export default function TopScreen({
   return (
     <div className="w-full max-w-[600px] mx-auto px-6 py-12 sm:py-16 flex flex-col items-center text-center">
       <p className="text-sm sm:text-base text-[#666666] mb-3">{subtitle}</p>
-      <h1 className="text-2xl sm:text-3xl font-bold text-[#1E5BA8] leading-snug mb-10">
+      <h1
+        className="text-2xl sm:text-3xl font-bold text-[#1E5BA8] leading-snug mb-10 break-keep"
+        style={{ textWrap: "balance" }}
+      >
         {title}
       </h1>
 
@@ -41,7 +44,7 @@ export default function TopScreen({
       </button>
 
       <p className="mt-8 text-xs text-[#666666]">
-        読者特典 / 松山さん『50代から始めるライフデザイン』
+        読者特典『50代から始めるライフデザイン』
       </p>
     </div>
   );
